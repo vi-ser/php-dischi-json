@@ -16,16 +16,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
-<body>
+<body data-bs-theme="dark">
 
     <div id="app">
 
+    <nav  class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">Boolify</a>
+        </div>
+    </nav>
+
         <div class="container py-5">
     
-            <h1>Album List</h1>
-
             <ul class="album-list mb-4 d-flex flex-wrap list-unstyled">
-                <li v-for="currentAlbum in albumList" class="album-cover">
+                <li v-for="currentAlbum in albumList" class="album-cover p-5 bg-dark-subtle rounded-4">
                     <img :src="currentAlbum.poster" alt="currentAlbum.title">
                 </li>
             </ul>
